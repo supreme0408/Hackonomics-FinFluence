@@ -19,6 +19,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+async def check_server():
+    return "Server is up and running!"
+
 @app.post("/budget-challenge", response_model=BudgetResponse)
 def handle_budget_feedback_request(data: BudgetRequest):
     """
