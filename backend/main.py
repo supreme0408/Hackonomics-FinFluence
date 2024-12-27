@@ -20,7 +20,7 @@ app.add_middleware(
 )
 
 @app.get("/")
-async def check_server():
+def check_server():
     return "Server is up and running!"
 
 @app.post("/budget-challenge", response_model=BudgetResponse)
