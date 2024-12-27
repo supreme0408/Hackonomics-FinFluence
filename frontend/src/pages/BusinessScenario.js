@@ -29,7 +29,7 @@ const BusinessScenario = () => {
   const handleStartPreparing = async () => {
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:8000/business-scenario", {
+      const response = await axios.post("https://hackonomics-fin-fluence-backend.vercel.app/business-scenario", {
         business_type: businessType,
         pricing_strategy: pricingStrategy,
       });

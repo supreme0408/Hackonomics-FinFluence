@@ -45,7 +45,7 @@ const BudgetingChallenge = () => {
     };
 
     try {
-      const res = await fetch("http://localhost:8000/budget-challenge", {
+      const res = await fetch("https://hackonomics-fin-fluence-backend.vercel.app/budget-challenge", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(requestData),
